@@ -1,0 +1,65 @@
+<mat-card class="card-form">
+  <h2 class="form-title">📋 Registro de Estudiantes</h2>
+  
+  <form [formGroup]="estudianteForm" (ngSubmit)="onSubmit()">
+
+    <!-- DNI -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>DNI</mat-label>
+      <input matInput formControlName="dni" maxlength="8">
+      <mat-error *ngIf="estudianteForm.get('dni')?.hasError('required')">
+        El DNI es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="estudianteForm.get('dni')?.hasError('pattern')">
+        Debe tener 8 dígitos numéricos.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Nombre -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre">
+      <mat-error *ngIf="estudianteForm.get('nombre')?.hasError('required')">
+        El nombre es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Apellidos -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Apellidos</mat-label>
+      <input matInput formControlName="apellidos">
+      <mat-error *ngIf="estudianteForm.get('apellidos')?.hasError('required')">
+        Los apellidos son obligatorios.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Correo -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Correo</mat-label>
+      <input matInput formControlName="correo">
+      <mat-error *ngIf="estudianteForm.get('correo')?.hasError('required')">
+        El correo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="estudianteForm.get('correo')?.hasError('email')">
+        Ingrese un correo válido.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Celular -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Celular</mat-label>
+      <input matInput formControlName="celular" maxlength="9">
+      <mat-error *ngIf="estudianteForm.get('celular')?.hasError('required')">
+        El celular es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="estudianteForm.get('celular')?.hasError('pattern')">
+        Debe tener 9 dígitos numéricos.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Botón -->
+    <button mat-raised-button color="primary" type="submit" [disabled]="estudianteForm.invalid">
+      <mat-icon>save</mat-icon> Registrar
+    </button>
+  </form>
+</mat-card>
