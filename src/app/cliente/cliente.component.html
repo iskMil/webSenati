@@ -1,0 +1,50 @@
+<div class="cliente-container">
+	<div class="cliente-info">
+		<h1>¡Hablemos!</h1>
+		<p>No pierdas esta oportunidad para crecer tus ventas<br>
+			y aumentar la retención y recurrencia de tu ecommerce.</p>
+		<hr>
+		<div class="cliente-email">
+			<mat-icon>email</mat-icon>
+			<div>
+				<strong>Envíanos un email</strong><br>
+				contacto@whatacart.ai
+			</div>
+		</div>
+	</div>
+		<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()" class="cliente-form">
+			<div *ngIf="enviado" style="color: green; font-weight: bold;">¡Mensaje enviado correctamente!</div>
+			<div *ngIf="errorMsg" style="color: red; font-weight: bold;">{{ errorMsg }}</div>
+		<div class="cliente-row">
+			<mat-form-field appearance="fill">
+				<input matInput placeholder="Nombres" formControlName="nombres">
+			</mat-form-field>
+			<mat-form-field appearance="fill">
+				<input matInput placeholder="Apellidos" formControlName="apellidos">
+			</mat-form-field>
+		</div>
+		<div class="cliente-row">
+			<mat-form-field appearance="fill">
+				<input matInput placeholder="Email" formControlName="email">
+			</mat-form-field>
+			<mat-form-field appearance="fill">
+				<input matInput placeholder="Teléfono" formControlName="telefono">
+			</mat-form-field>
+		</div>
+
+        <div class="cliente-row">
+			<mat-form-field appearance="fill">
+				<input matInput placeholder="Dni" formControlName="dni">
+			</mat-form-field>
+			<mat-form-field appearance="fill">
+				<input matInput placeholder="Direccion" formControlName="direccion">
+			</mat-form-field>
+		</div>
+		<mat-form-field appearance="fill" class="cliente-mensaje">
+			<textarea matInput placeholder="Déjanos un mensaje" formControlName="mensaje" rows="3"></textarea>
+		</mat-form-field>
+		<button mat-raised-button color="primary" type="submit" [disabled]="clienteForm.invalid">
+			Enviar mensaje
+		</button>
+	</form>
+</div>

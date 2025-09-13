@@ -1,0 +1,63 @@
+.cliente-container {
+  display: flex;
+  background: #e8d3e8;
+  border-radius: 16px;
+  padding: 32px;
+  gap: 32px;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 32px auto;
+}
+.cliente-info {
+  flex: 1;
+  min-width: 260px;
+}
+.cliente-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.cliente-info p {
+  color: #555;
+  margin-bottom: 16px;
+}
+.cliente-info hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 2px solid #bbb;
+  width: 80%;
+}
+.cliente-email {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f5e9f5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+.cliente-email mat-icon {
+  font-size: 32px;
+}
+.cliente-form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cliente-row {
+  display: flex;
+  gap: 16px;
+}
+.cliente-row mat-form-field {
+  flex: 1;
+}
+.cliente-mensaje {
+  width: 100%;
+}
+button[type="submit"] {
+  width: 200px;
+  align-self: flex-end;
+  background: #222;
+  color: #fff;
+}

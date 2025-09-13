@@ -1,0 +1,293 @@
+.docente-form input[formControlName="apellidos"],
+.docente-form input[formControlName="direccion"] {
+    background: #fff;
+    border: 2px solid #d1d1d1;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(79,211,196,0.08);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.docente-form input[formControlName="apellidos"]:focus,
+.docente-form input[formControlName="direccion"]:focus {
+    border-color: #4fd3c4;
+    box-shadow: 0 4px 12px rgba(79,211,196,0.15);
+    outline: none;
+}
+.docente-form input[formControlName="apellidos"]::placeholder,
+.docente-form input[formControlName="direccion"]::placeholder {
+    color: #888;
+    font-style: italic;
+}
+.docente-form input[formControlName="nombre"] {
+    background: #fff;
+    border: 2px solid #d1d1d1;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(79,211,196,0.08);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.docente-form input[formControlName="nombre"]:focus {
+    border-color: #4fd3c4;
+    box-shadow: 0 4px 12px rgba(79,211,196,0.15);
+    outline: none;
+}
+.docente-form input[formControlName="nombre"]::placeholder {
+    color: #888;
+    font-style: italic;
+}
+/* Fondo del contenedor principal con un gradiente suave */
+.docente-container {
+    background: linear-gradient(135deg, #a7e1e4, #ff91b5);  /* Gradiente pastel suave */
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 500px;
+    margin: 50px auto;
+    color: #333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos del título */
+.docente-container h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+
+.docente-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.docente-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.mat-form-field {
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    padding: 8px 16px;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    margin-bottom: 0;
+    border: 2px solid #d1d1d1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.mat-form-field:hover,
+.mat-form-field:focus-within {
+    background-color: #fff;
+    border-color: #4fd3c4;
+    box-shadow: 0 4px 12px rgba(79,211,196,0.15);
+}
+
+.mat-icon {
+    color: #4fd3c4;
+    opacity: 0.8;
+    margin-right: 8px;
+    font-size: 22px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    max-width: 220px;
+    padding: 12px;
+    background-color: #4fd3c4;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #3aa09d;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.docente-container .success-msg {
+    color: #28a745;
+    background-color: rgba(40,167,69,0.1);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.docente-container .error-msg {
+    color: #dc3545;
+    background-color: rgba(220,53,69,0.1);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los campos de entrada */
+.mat-form-field {
+    background-color: #ffffff80;
+    border-radius: 8px;
+    padding: 10px;
+    flex: 1;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto al enfocar los campos */
+.mat-form-field:hover,
+.mat-form-field:focus-within {
+    background-color: #ffffff;
+    border-color: #4fd3c4;  /* Color suave para el borde */
+    box-shadow: 0 4px 12px rgba(79, 211, 196, 0.2);
+}
+
+/* Íconos dentro de los campos */
+.mat-icon {
+    color: #4fd3c4;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre los íconos */
+.mat-icon:hover {
+    opacity: 1;
+}
+
+/* Estilo del botón de enviar */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #4fd3c4;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+button[type="submit"]:hover {
+    background-color: #3aa09d;
+    transform: translateY(-2px);
+}
+
+/* Botón deshabilitado */
+button[type="submit"]:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Estilo del enlace de "Olvidé mi contraseña" */
+.docente-container a {
+    color: #4fd3c4;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre el enlace */
+.docente-container a:hover {
+    color: #3aa09d;
+}
+
+/* Estilo del mensaje de "¡Formulario enviado!" */
+.docente-container .success-msg {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Estilo de los mensajes de error */
+.docente-container .error-msg {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Estilo de los campos de texto */
+.mat-form-field {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 8px;
+    border: 2px solid #d1d1d1; /* Borde gris suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por encima del campo */
+.mat-form-field:hover {
+    border-color: #4fd3c4; /* Cambio de color de borde */
+    box-shadow: 0 4px 12px rgba(79, 211, 196, 0.3); /* Sombra más intensa */
+}
+
+/* Efecto de foco: cuando el usuario hace clic o selecciona el campo */
+.mat-form-field.mat-focused {
+    border-color: #4fd3c4; /* Color de borde al enfocarse */
+    box-shadow: 0 0 8px rgba(79, 211, 196, 0.5); /* Sombra al enfocar */
+}
+
+/* Estilo para los iconos dentro del campo */
+.mat-icon {
+    color: #4fd3c4; /* Color del ícono */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Efecto de los íconos al pasar el ratón */
+.mat-icon:hover {
+    opacity: 1;
+}
+
+/* Estilo del campo de texto cuando el usuario empieza a escribir */
+.mat-form-field input {
+    padding-left: 30px; /* Espaciado para que no se solapen los íconos */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Ajuste del placeholder */
+.mat-form-field input::placeholder {
+    color: #888; /* Color más suave para el texto del placeholder */
+    font-style: italic;
+}
+
+/* Estilo para los campos de texto en estado inválido */
+.mat-form-field.mat-form-field-invalid {
+    border-color: #dc3545; /* Borde rojo para campos inválidos */
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5); /* Sombra roja para campos inválidos */
+}
+
+/* Agregar transición suave en los estados de foco, hover, etc. */
+.mat-form-field input:focus {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}

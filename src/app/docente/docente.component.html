@@ -1,0 +1,33 @@
+<div class="docente-container">
+	<h1>Docente Contact Form</h1>
+	<form [formGroup]="docenteForm" (ngSubmit)="onSubmit()" class="docente-form">
+		<div *ngIf="enviado" style="color: green; font-weight: bold;">¡Formulario enviado correctamente!</div>
+		<div *ngIf="errorMsg" style="color: red; font-weight: bold;">{{ errorMsg }}</div>
+		<div class="docente-row">
+			<mat-form-field appearance="fill">
+				<mat-label>Nombre</mat-label>
+				<input matInput placeholder="Nombre" formControlName="nombre">
+				<mat-icon matPrefix>person</mat-icon>
+			</mat-form-field>
+			<mat-form-field appearance="fill"> 
+				<mat-label>Apellidos</mat-label>
+				<input matInput placeholder="Apellidos" formControlName="apellidos">
+				<mat-icon matPrefix>badge</mat-icon>
+			</mat-form-field>
+		</div>
+		<div class="docente-row">
+			<mat-form-field appearance="fill">
+				<mat-label>Dirección</mat-label>
+				<input matInput placeholder="Dirección" formControlName="direccion">
+				<mat-icon matPrefix>home</mat-icon>
+			</mat-form-field>
+			<mat-form-field appearance="fill">
+				<mat-label>Enabled</mat-label>
+				<mat-checkbox formControlName="enabled">Activo</mat-checkbox>
+			</mat-form-field>
+		</div>
+		<button mat-raised-button color="primary" type="submit" [disabled]="docenteForm.invalid">
+			Enviar
+		</button>
+	</form>
+</div>
